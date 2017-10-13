@@ -1,4 +1,4 @@
-# Load Dependencies
+?sa# Load Dependencies
 
 library(httr)
 library(dplyr)
@@ -96,9 +96,6 @@ setnames(top.song.features, 3:15, c("danceability", "energy", "key", "loudness",
                                     "acousticness", "instrumentalness", "liveness", "valence", "tempo","duration_ms", "time_signature"))
 
 
-#test histograms for shiny app
-
-ggplot(top.song.features, aes(x = danceability)) + 
-  geom_histogram(bins = 25) +
-  theme_minimal()
+#save Features dataframe to RDS
+saveRDS(top.song.features, file = "songsdf")
 

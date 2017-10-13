@@ -1,4 +1,8 @@
+#dependancies
 library(shiny)
+library(ggplot2)
+top.song.features <- readRDS("songsdf")
+
 
 # Define server logic
 shinyServer(function(input, output) {
