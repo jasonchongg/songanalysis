@@ -10,8 +10,8 @@ library(rpart)
 
 # OAuth Authentication
 
-client_id <- "4719e6d2b95b4cbd8f00fa505beb424d"
-client_secret <- "7ad542280cc04c3b96f9b9b31231556f"
+client_id <- ""
+client_secret <- ""
 
 response = POST(
   'https://accounts.spotify.com/api/token',
