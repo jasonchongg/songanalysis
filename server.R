@@ -1,6 +1,7 @@
 #dependancies
 library(shiny)
 library(ggplot2)
+library(DT)
 top.song.features <- readRDS("songsdf")
 
 
@@ -65,6 +66,11 @@ shinyServer(function(input, output) {
     output$statistics = renderText({
       as.character(sentence)
     })
+      #Generate Data Table
+      output$table = DT::renderDataTable({
+        top.song.features
+        })
+    
     })
     
   })

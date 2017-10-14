@@ -5,6 +5,6 @@ account: jasonchong
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 224814
-bundleId: 1024866
+bundleId: 1026377
 url: https://jasonchong.shinyapps.io/songanalysis/
-when: 1507889687.80941
+when: 1507964306.26223
