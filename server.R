@@ -48,6 +48,23 @@ shinyServer(function(input, output) {
       output$description = renderText({
         paste0(tools::toTitleCase(input$feature), feat.description)
       })
+      
+    #Generate key statistics
+      y <- grep(input$feature, colnames(top.song.features))
+      x <- top.song.features[min(input$rank):max(input$rank),y]
+      avg <- mean(x)
+      variance <- var(x)
+      sd <- sqrt(variance)
+      
+      avgsentence <- paste0("Mean: ", as.character(avg))
+      varsentence <- paste0("Variance: ", as.character(variance))
+      sdsentence <- paste0("Standard Deviation: ", as.character(sd))
+      
+      sentence <- HTML(paste(avgsentence, varsentence, sdsentence, sep = "<br/>"))
+      
+    output$statistics = renderText({
+      as.character(sentence)
+    })
     })
     
   })

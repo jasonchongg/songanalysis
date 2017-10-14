@@ -26,7 +26,9 @@ shinyUI(
                 label = "Histogram Bins",
                 value = 25,
                 min = 1,
-                max = 50)
+                max = 50),
+    strong("Key Statistics"),
+    br(htmlOutput(outputId = "statistics"))
     
   ),
   
