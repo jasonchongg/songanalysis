@@ -2,6 +2,7 @@
 library(shiny)
 library(ggplot2)
 library(DT)
+library(plotly)
 top.song.features <- readRDS("data/songsdf")
 
 

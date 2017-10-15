@@ -1,6 +1,7 @@
 #dependancies
 library(shiny)
 library(ggplot2)
+library(plotly)
 top.song.features <- readRDS("data/songsdf")
 
 # Define UI for miles per gallon application
