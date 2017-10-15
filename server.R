@@ -2,7 +2,7 @@
 library(shiny)
 library(ggplot2)
 library(DT)
-top.song.features <- readRDS("songsdf")
+top.song.features <- readRDS("data/songsdf")
 
 
 # Define server logic
@@ -82,10 +82,10 @@ shinyServer(function(input, output) {
         track3 <- top.song.features[which(top.song.features$track == input$track3), grep(input$feature1, colnames(top.song.features))]
         track4 <- top.song.features[which(top.song.features$track == input$track4), grep(input$feature1, colnames(top.song.features))]
         track5 <- top.song.features[which(top.song.features$track == input$track5), grep(input$feature1, colnames(top.song.features))]
-        plot_ly(x = c(track1,track2,track3,track4,track5),
+        layout(plot_ly(x = c(track1,track2,track3,track4,track5),
           y = c(input$track1, input$track2, input$track3, input$track4, input$track5),
-          type = 'bar', orientation = 'h') %>%
-          layout(xaxis = x)
+          type = 'bar', orientation = 'h'), xaxis = x)
+          
       })
           
     
