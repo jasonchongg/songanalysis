@@ -35,9 +35,18 @@ shinyUI(
     
     #Track Analysis
     conditionalPanel(condition = "input.tabselected==2", 
-          selectInput(inputId = "tracks", label = "Tracks:",
+          selectInput(inputId = "track1", label = "Track1:",
                       choices = top.song.features$track),
-    selectInput(inputId = "feature", label = "Feature:",
+          selectInput(inputId = "track2", label = "Track2:",
+                      choices = top.song.features$track, selected = top.song.features$track[2]),
+          selectInput(inputId = "track3", label = "Track3:",
+                      choices = top.song.features$track, selected = top.song.features$track[3]),
+          selectInput(inputId = "track4", label = "Track4:",
+                      choices = top.song.features$track, selected = top.song.features$track[4]),
+          selectInput(inputId = "track5", label = "Track5:",
+                      choices = top.song.features$track, selected = top.song.features$track[5]),
+  
+    selectInput(inputId = "feature1", label = "Feature:",
                 choices = c("danceability", "energy", "key",
                             "loudness", "mode", "speechiness", 
                             "acousticness", "instrumentalness",
@@ -55,8 +64,10 @@ shinyUI(
                               plotOutput("histogram"),
                               textOutput(outputId = "description"))),
       tabPanel("Track Analysis", value = 2,
-               conditionalPanel(condition = "input.tabselected==2" 
-                                )),
+               conditionalPanel(condition = "input.tabselected==2",
+                               plotlyOutput("bargraph"),
+                               textOutput(outputId = 'description1')
+                               )),
       tabPanel("Data", value = 3,    
                conditionalPanel(condition = "input.tabselected==3", 
                                 DT::dataTableOutput("table"))), 
