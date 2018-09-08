@@ -25,11 +25,11 @@ You can conduct feature analysis on up to five tracks on each individual feature
 Data: 
 The dataset collected and used in the feature analysis is displayed here. Work in progress.
 
-## Future
-As the project grows, the goal is to develop a coherent data collection process to allow you to cycle through multiple dates or weeks of top 200 charts. The app is meant to allow you to conduct time-series analysis of popularity trends and also allow you to conduct multi-track analysis. I hope to implement genres as well as a Key Insight portion where there is a summary of the audio analysis.
+## Future Upgrades
+As the project grows, the goal is to develop a coherent data collection process to allow you to cycle through multiple dates or weeks of top 200 charts. The app is meant to allow you to eventually conduct time-series analysis of popularity trends and also allow you to conduct multi-track analysis. I hope to implement genres as well as a Key Insight portion where there is a summary of the audio analysis.
 
 ## Machine Learning
-Initially before this project, I conducted an exploratory analysis on Drake songs utilizing a similar data collection method. It can be read [here](http://rpubs.com/jason3319/drakepredictions). Potentially, I may integrate machine learning models if the data is sufficient to see whether artificial intelligence can accurately predict artist's based on track audio features.
+Initially before this project, I conducted an exploratory analysis on Drake songs utilizing a similar data collection method. Potentially, I may integrate machine learning models if the data is sufficient to see whether artificial intelligence can accurately predict artist's based on track audio features.
 
 
 
